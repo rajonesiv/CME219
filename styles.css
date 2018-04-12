@@ -1,0 +1,254 @@
+/* 
+  CLASS SITE COLORS
+  ORANGE: rgb(228, 77, 38);
+  BLUE: rgb(0,112,187);
+  LIGHT GREY: rgb(230, 230, 230);
+*/
+
+/* the asterisk applies to everything */
+
+* {
+  font-family: Eurostile, "Century Gothic", sans-serif;
+  font-size: 12pt;
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(230, 230, 230);
+  min-width: 700px;
+}
+
+header img {
+  margin: 10px 20px;
+}
+
+nav a,
+footer a {
+  color: gray;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  line-height: 55px;
+}
+
+/* When you hover over the link, the text should turn blue */
+nav a:hover {
+  color: rgb(0, 112, 187);
+}
+
+nav li,
+footer li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+nav li {
+  border-top: 4px solid rgb(230, 230, 230);
+}
+
+nav li:hover {
+  border-top: 4px solid rgb(0, 112, 187);
+}
+
+nav {
+  float: right;
+  margin-right: 4%;
+}
+
+a {
+  color: gray;
+}
+
+h1 {
+  color: rgb(228, 77, 38);
+  font-size: 200%;
+  /* margin-bottom: 10px; */
+  position: relative;
+  top: -10px;
+}
+
+h2 {
+  color: gray;
+  font-size: 150%;
+  /* margin-top: 20px; */
+  position: relative;
+  top: -10px;
+}
+
+h3 {
+  color: rgb(228, 77, 38);
+  font-size: 125%;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: rgb(220, 220, 220);
+  text-align: center;
+  border-top: 4px solid rgb(150, 150, 150);
+  padding: 20px 20px;
+  position: relative;
+  top: -8px;
+}
+
+#pictureBox {
+  border-bottom: 4px solid rgb(150, 150, 150);
+  border-top: 4px solid rgb(150, 150, 150);
+  height: 100px;
+  padding: 20px 12%;
+  min-width: 600px;
+}
+
+#pictureBox img {
+  float: right;
+  margin: 0 20px 0 40px;
+}
+
+main {
+  width: 70%;
+  min-width: 600px;
+  margin: 0 auto;
+  border-top: 4px solid rgb(0, 112, 187);
+  border-bottom: 4px solid rgb(0, 112, 187);
+  padding: 20px 20px 40px;
+  /* Just want to slightly move blue bar, nothing else */
+  position: relative;
+  top: -4px;
+  /* Now need to move main on top of footer, using z-index.
+   * If using a negative z-index on footer will prevent the
+   * URLs from working...
+   */
+  z-index: 2;
+}
+
+main ul {
+  list-style-type: square;
+  position: relative;
+  left: 18px;
+}
+
+/*--- RESOURCES SETTINGS ---*/
+.resourceBox,
+form {
+  background-color: rgb(230, 230, 230);
+  width: 75%;
+  margin: 0 20px 20px;
+  padding: 10px 20px 20px;
+  border-radius: 10px;
+}
+
+.resourceBox h3 {
+  color: gray;
+}
+
+.resourceBox a,
+h3 a {
+  color: rgb(0, 112, 187);
+  text-decoration: none;
+}
+
+.resourceBox li {
+  list-style-type: none;
+}
+/*--- END OF RESOURCES SETTINGS ---*/
+
+/*---- INDEX PAGE SETTINGS ----*/
+
+#indexPicBox {
+  height: 150px;
+}
+
+#indexPicBox img {
+  /* percentages are based on the parent, indexPicBox */
+  height: 100%;
+  width: auto;
+}
+
+figure {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 2%;
+}
+
+figure a {
+  text-decoration: none;
+}
+
+figcaption p {
+  color: black;
+}
+
+/*---- END OF INDEX PAGE SETTINGS ----*/
+
+/*---- FORM SETTINGS ----*/
+
+form {
+  padding-top: 20px;
+}
+
+label {
+  vertical-align: top;
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+  margin-right: 5px;
+}
+
+input,
+textarea {
+  margin-bottom: 10px;
+}
+
+/*---- END OF FORM SETTINGS ----*/
+
+/*---- TABLE SETTINGS ----*/
+
+table {
+  width: 90%;
+  max-width: 600px;
+  border: 1px solid gray;
+  border-collapse: collapse;
+  /* 20px will apply to both left and right margins if three values listed */
+  margin: 10px 20px 0px;
+  /* border-spacing: 5px 10px; */
+}
+
+td,
+th {
+  border: 1px solid gray;
+  padding: 5px;
+  vertical-align: top;
+}
+
+th {
+  background-color: rgb(200, 200, 200);
+  color: black;
+}
+
+/* the first child, or the first tr element: */
+tr:first-child > th {
+  background-color: rgb(100, 100, 100);
+  color: white;
+}
+
+/* +p means the paragraph immediately following the table */
+table + p {
+  font-style: italic;
+}
+
+/*---- END OF TABLE SETTINGS ----*/
+
+/*---- IMAGE SETTINGS ----*/
+.peoplePic {
+  background-color: rgb(230, 230, 230);
+  padding: 10px;
+  border: 1px solid gray;
+  float: right;
+  margin-left: 20px;
+}
+/*---- END OF IMAGE SETTINGS ----*/

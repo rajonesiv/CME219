@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Advanced HTML</title>
+    </head>
+
+    <body>
+        <h1>Contact Us</h1>
+        <p>If you have any questions regarding this trip and the details of the study abroad experience, please email the professors
+            below.
+        </p>
+        <p>Professor Rector and Professor Armstrong will be leading the student group during this study abroad experience. If
+            you have questions or wish to express interest in attending the trip, please email the professors.</p>
+        <form action="goTrip.php" method="GET">
+            <label for="fullName">Full Name: </label>
+            <input type="text" name="fullName" id="fullName" />
+            <br/>
+            <label for="emailAddr">Email Address: </label>
+            <input type="text" name="emailAddr" id="emailAddr" />
+            <br/>
+            <label for="college">University College</label>
+            <select name="college" id="college">
+                <option value="comm">College of Communication</option>
+                <option value="lsb">Andre B. Lacy School of Business</option>
+                <option value="liberal">College of Liberal Arts and Sciences</option>
+                <option value="arts">Jordan College of the Arts</option>
+                <option value="edu">College of Education</option>
+                <option value="pharm">College of Pharmacy and Health Sciences</option>
+            </select>
+            <p>Would you like a Germany Study Abroad brochure emailed to you?</p>
+            <input type="radio" name="brochure" value="yes" id="yes" checked />
+            <label for="yes">Yes</label>
+            <input type="radio" name="borochure" value="no" id="no" />
+            <label for="no">No</label>
+            <br/>
+            <p>Comments:</p>
+            <!-- text areas used for large amount of input text-->
+            <textarea name="comments" placeholder="Please list any questions here"></textarea>
+            <br/>
+            <input type="submit" name="submit" value="I want to go!" id="submit" />
+        </form>
+    </body>
+
+</html>

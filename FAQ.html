@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FAQ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body id="top">
+        <header>
+            <nav>
+                <a href="index.html">
+                    <img src="images/logoS16.png" alt="Spring 2018 Logo" height="45" width="177" />
+                </a>
+                <ul>
+                    <li>
+                        <a href="courseInfo.html">COURSE</a>
+                    </li>
+                    <li>
+                        <a href="schedule.html">SCHEDULE</a>
+                    </li>
+                    <li>
+                        <a href="resources.html">RESOURCES</a>
+                    </li>
+                    <li>
+                        <a href="class.html">CLASS ROSTER</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="pictureBox">
+            <img src="images/resources.png" alt="resources" height="100" width="100" />
+            <h1>Frequently Asked Questions</h1>
+            <h2>Answers to your important questions</h2>
+        </div>
+        <main>
+            <h3>Frequently Asked Questions</h3>
+            <p>Here are the answers to your most asked questions.</p>
+
+            <!-- questions -->
+            <h3>
+                <a href="#server">How do I connect to the server/Thomas?</a>
+            </h3>
+            <h3>
+                <a href="#connection">How do I set up the server connection in Visual Studio Code?</a>
+            </h3>
+            <h3>
+                <a href="#publish">How do I publish my webpage to the server/Thomas?</a>
+            </h3>
+            <h3>
+                <a href="#link">What link do I turn in for assignments?</a>
+            </h3>
+            <h3>
+                <a href="#forbidden">
+                    <h3> When I view my page/image in a browser, it says
+                        <it>Forbidden</it>. How do I correct this?
+                        <h3>
+                </a>
+                </h3>
+
+                <!-- answers -->
+                <h3 id="server">How do I connect to the server/Thomas?</h3>
+                <ol>
+                    <li>Using your Mac toolbar at the top of your screen, select
+                        <it>Go</it>.</li>
+                    <li>Select
+                        <it>Connect to Server</it>...</li>
+                    <li>Enter the following into the server address field:
+                        <it>smb://thomas.butler.edu</it>
+                    </li>
+                    <li>Select
+                        <it>Connect</it>
+                    </li>
+                    <li>If your computer asks for your username and password, please input that information.</li>
+                    <li>Select your user name folder.</li>
+                    <li>If you are able to access your folder, you have successfully gained access to your webspace on the server.</li>
+                </ol>
+                <!-- end #server answer-->
+                <br/>
+                <h3 id="connection">How do I set up the server connection in Visual Studio Code?</h3>
+                <ol>
+                    <li>While in Visual Studio Code, select Shift+Command+P and type in the following:
+                        <it>SFTP:Config</it>. Hit Enter</li>
+                    <li>This will open up a JSON file. Change the following fields:
+                        <ul>
+                            <li>"host": "thomas.butler.edu"</li>
+                            <li>"username": your username</li>
+                            <li>"password": your password</li>
+                            <li>"remotePath": "/home/username/public_html/CME219"</li>
+                        </ul>
+                    </li>
+                    <li>Hit Save.</li>
+                </ol>
+                <!-- end #connection answer -->
+                <br/>
+                <h3 id="publish">How do I publish my webpage to the server/Thomas?</h3>
+                <ol>
+                    <li>Select the file that you want to upload.</li>
+                    <li>Right-click and choose
+                        <it>SFTP: Upload</it>.</li>
+                    <li>A message at the bottom should say
+                        <it>Upload Complete</it>
+                    </li>
+                </ol>
+                <!-- end #publish answer -->
+                <br/>
+                <h3 id="link">What link do I turn in for assignments?</h3>
+                <p>You will need to turn in the link to your page on the server. NOT your BUFiles location. For instance, if
+                    you publish a page called code.html to your class folder, on the server (Thomas), your url will look
+                    like this:
+                    <it>http://blue.butler.edu/~username/class/code.html</it>
+                </p>
+                <!-- end #link answer -->
+                <br/>
+                <h3 id="forbidden">When I view my page/image in a browser, it says
+                    <it>Forbidden</it>. How do I correct this?</h3>
+                <ol>
+                    <li>While in Visual Studio Code, click on the terminal tab at the bottom of your application.</li>
+                    <li>Enter the following text at the prompt:
+                        <it>ssh thomas.butler.edu</it>. If you are using your own laptop, type the following text:
+                        <it>ssh username@thomas.bitler.edu</it>.</li>
+                    <li>You will then be asked for your password. Even though it appears as if you are not typing your password,
+                        you are; the application is password-protecting your password for security reasons.
+                    </li>
+                    <li>You should get the following prompt:
+                        <it>thomas%</it>
+                    </li>
+                    <li>Enter the following text:
+                        <it>fix_account</it>
+                    </li>
+                    <li>Refresh your browser.</li>
+                </ol>
+                <!-- end #forbidden answer-->
+                <br/>
+
+                <a href="#top">top</a>
+        </main>
+
+        <footer>
+            <ul>
+                <li>
+                    <!-- target="_blank" opens butler in a new tab -->
+                    <a href="http://www.butler.edu" target="_blank">BUTLER UNIVERSITY</a>
+                </li>
+                <li>
+                    <a href="mailto:crector@butler.edu">IDEAS?</a>
+                </li>
+                <li>
+                    <a href="contact.html">COMMENTS?</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+
+</html>

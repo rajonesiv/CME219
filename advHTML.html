@@ -1,0 +1,75 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Advanced HTML</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" type="text/css" rel="stylesheet" />
+        <style>
+            table {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            td,
+            th {
+                border: 1px solid black;
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Tables</h1>
+        <table>
+            <!-- table row -->
+            <tr>
+                <!-- table header -->
+                <!-- colspan 3 means "Class Roster" will span 3 columns -->
+                <th colspan="3">Class Roster</th>
+            </tr>
+            <tr>
+                <th>Class</th>
+                <th colspan="2">Student Name</th>
+            </tr>
+            <tr>
+                <!-- table data cell -->
+                <td rowspan="2">Freshman</td>
+                <td>Sally</td>
+                <td>Smith</td>
+            </tr>
+            <tr>
+                <!-- table data cell -->
+                <td>Rachel</td>
+                <td>Sypes</td>
+            </tr>
+            <tr>
+                <!-- table data cell -->
+                <td>Sophomore</td>
+                <td>Joe</td>
+                <td>Jones</td>
+            </tr>
+            <tr>
+                <!-- table data cell -->
+                <td>Junior</td>
+                <td>Cassie</td>
+                <td>Reynolds</td>
+            </tr>
+            <tr>
+                <!-- table data cell -->
+                <td rowspan="2">Senior</td>
+                <td>Tom</td>
+                <td>Wyland</td>
+            </tr>
+            <tr>
+                <!-- table data cell -->
+                <td>Leroy</td>
+                <td>Jenkins</td>
+            </tr>
+        </table>
+
+    </body>
+
+</html>

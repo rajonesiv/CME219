@@ -1,0 +1,82 @@
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10px;
+  background-color: rgb(151, 59, 36);
+}
+
+.container {
+  background-color: rgb(201, 156, 114);
+}
+
+h1 {
+  font-size: 300%;
+  text-shadow: 4px 4px #d95204;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+nav li {
+  list-style-type: none;
+  font-size: 150%;
+  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  color: white;
+}
+
+.instructions {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  float: right;
+  width: 25%;
+}
+
+.instructions h3 {
+  text-align: center;
+}
+
+.ingredients {
+  width: 255px;
+  line-height: 20px;
+  float: left;
+}
+
+/* do this to the paragraph following ingredients class */
+.ingredients + p {
+  clear: both;
+}
+
+#customer {
+  clear: right;
+}
+
+input {
+  border-style: outset;
+  color: green;
+}
+
+input:focus {
+  border: inset;
+}
+
+legend {
+  font-size: 120%;
+}
+
+/*---- TABLE SETTINGS ----*/
+
+#pizzaTable tr:nth-child(4),
+#pizzaTable tr:nth-child(6) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#pizzaTable tr:nth-child(3),
+#pizzaTable tr:nth-child(5) {
+  background-color: rgba(217, 82, 4, 0.2);
+}
+
+/*---- END OF TABLE SETTINGS ----*/
