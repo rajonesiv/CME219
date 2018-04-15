@@ -1,0 +1,95 @@
+/* 
+  CLASS SITE COLORS
+  ORANGE: rgb(228, 77, 38);
+  BLUE: rgb(0,112,187);
+  LIGHT GREY: rgb(230, 230, 230);
+*/
+
+/* the asterisk applies to everything */
+
+* {
+  font-family: Eurostile, "Century Gothic", sans-serif;
+  font-size: 12pt;
+  line-height: 150%;
+}
+
+header {
+  background-color: rgb(230, 230, 230);
+}
+
+nav a,
+footer a {
+  color: gray;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a {
+  color: gray;
+}
+
+h1 {
+  color: rgb(228, 77, 38);
+  font-size: 200%;
+}
+
+h2 {
+  color: gray;
+  font-size: 150%;
+}
+
+h3 {
+  color: rgb(228, 77, 38);
+  font-size: 125%;
+}
+
+footer {
+  background-color: rgb(220, 220, 220);
+  text-align: center;
+}
+
+/*--- RESOURCES SETTINGS ---*/
+.resourceBox,
+form {
+  background-color: rgb(230, 230, 230);
+}
+
+.resourceBox h3 {
+  color: gray;
+}
+
+.resourceBox a,
+h3 a {
+  color: rgb(0, 112, 187);
+  text-decoration: none;
+}
+/*--- END OF RESOURCES SETTINGS ---*/
+
+/*---- INDEX PAGE SETTINGS ----*/
+
+figure a {
+  text-decoration: none;
+}
+
+figcaption p {
+  color: black;
+}
+
+/*---- END OF INDEX PAGE SETTINGS ----*/
+
+/*---- FORM SETTINGS ----*/
+
+label {
+  vertical-align: top;
+}
+
+/*---- END OF FORM SETTINGS ----*/
+
+/*---- TABLE SETTINGS ----*/
+
+/* +p means the paragraph immediately following the table */
+table + p {
+  font-style: italic;
+}
+
+/*---- END OF TABLE SETTINGS ----*/
