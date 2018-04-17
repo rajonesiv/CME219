@@ -2,19 +2,46 @@ body {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 10px;
   background-color: rgb(151, 59, 36);
+  line-height: 150%;
+  /* the image on top goes first */
+  background-image: url(images/Tony.png), url(images/Redbackground.jpg);
+  /* Tony doesn't repeat, Red bkgd repeats on both x,y axes */
+  background-repeat: no-repeat, repeat;
+  /* attachment listed once applies to both images 
+   * fixed keeps tony where he is (he will move across page)
+   * scroll allows background to "stay" where it is
+   */
+  background-attachment: scroll, fixed;
+  background-position: top left;
 }
 
-.container {
-  background-color: rgb(201, 156, 114);
+main {
+  background-color: rgb(210, 168, 114);
+  border-radius: 10px;
+  padding: 20px;
+  width: 75%;
+  margin: 0px auto;
 }
+
+/* .container {
+  background-color: rgb(201, 156, 114);
+  margin: 0 5% 0;
+} */
 
 h1 {
   font-size: 300%;
   text-shadow: 4px 4px #d95204;
+  text-align: center;
+  color: white;
 }
 
 h2 {
   font-size: 200%;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
 }
 
 nav li {
@@ -32,7 +59,8 @@ nav li {
   border: 1px solid black;
   border-radius: 5px;
   float: right;
-  width: 25%;
+  width: 200px;
+  margin: 20px;
 }
 
 .instructions h3 {
@@ -54,9 +82,32 @@ nav li {
   clear: right;
 }
 
+fieldset {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+  background-image: url(images/pizza.png);
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  background-position: bottom right;
+  background-origin: content-box;
+  padding: 10px;
+}
+
+legend {
+  background-color: darkred;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 input {
   border-style: outset;
   color: green;
+  margin: 5px 0;
+  text-align: start;
 }
 
 input:focus {
@@ -68,6 +119,34 @@ legend {
 }
 
 /*---- TABLE SETTINGS ----*/
+
+/* #pizzaTable {
+  clear: both;
+} */
+
+#toppings {
+  margin: 30px 30px 0 0;
+}
+
+#toppings th {
+  color: green;
+}
+
+#toppings td {
+  width: 100px;
+}
+
+#pizzaTable {
+  margin: 0 30px 10px 0;
+}
+
+#pizzaTable th {
+  color: green;
+}
+
+#pizzaTable td {
+  width: 100px;
+}
 
 #pizzaTable tr:nth-child(4),
 #pizzaTable tr:nth-child(6) {
