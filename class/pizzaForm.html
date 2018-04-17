@@ -21,7 +21,7 @@
             <li>Locations</li>
             <li>Contact Us</li>
         </nav>
-        <div class="container">
+        <main>
             <div class="instructions">
                 <h3>How it works:</h3>
                 <ol>
@@ -29,7 +29,8 @@
                     <li>Fill in your information below. Enter in your pizza information… everything from the size, crust type,
                         and any combination of toppings.</li>
                     <li>Enter in your personal and payment information. This will allow us to deliver your pizza as quickly as
-                        possible.</li>
+                        possible.
+                    </li>
                     <li>Wait a few minutes for our driver to deliver your pizza… hot and fresh to your door.</li>
                 </ol>
             </div>
@@ -65,7 +66,7 @@
                     <td>$1.59</td>
                 </tr>
             </table>
-            <table>
+            <table id="toppings">
                 <tr>
                     <th>Pizza Toppings</th>
                 </tr>
@@ -93,117 +94,115 @@
                     <td>Mushrooms</Td>
                 </tr>
             </table>
+            <form action="sendPizza.php" method="POST">
+                <fieldset id="customer">
+                    <legend>Customer Information</legend>
+                    <label for="firstName">First Name: </label>
+                    <!-- "for" value and "id" must be the same -->
+                    <input type="text" name="firstName" id="firstName" />
+                    <br/>
+                    <label for="lastName">Last Name: </label>
+                    <input type="text" name="lastName" id="lastName" />
+                    <br/>
+                    <label for="address">Address: </label>
+                    <input type="text" name="address" id="address" />
+                    <br/>
+                    <label for="city">City: </label>
+                    <input type="text" name="city" id="city" />
+                    <br/>
+                    <label for="phoneNumber">Phone Number: </label>
+                    <input type="text" name="phoneNumber" id="phoneNumber" placeholder="(123) 456-7890" />
+                    <br/>
+                </fieldset>
 
-            <main>
-                <form action="sendPizza.php" method="POST">
-                    <fieldset id="customer">
-                        <legend>Customer Information</legend>
-                        <label for="firstName">First Name: </label>
-                        <!-- "for" value and "id" must be the same -->
-                        <input type="text" name="firstName" id="firstName" />
-                        <br/>
-                        <label for="lastName">Last Name: </label>
-                        <input type="text" name="lastName" id="lastName" />
-                        <br/>
-                        <label for="address">Address: </label>
-                        <input type="text" name="address" id="address" />
-                        <br/>
-                        <label for="city">City: </label>
-                        <input type="text" name="city" id="city" />
-                        <br/>
-                        <label for="phoneNumber">Phone Number: </label>
-                        <input type="text" name="phoneNumber" id="phoneNumber" placeholder="(123) 456-7890" />
-                        <br/>
-                    </fieldset>
+                <fieldset>
+                    <legend>Pizza Information</legend>
+                    <label for="crust">Type of Crust</label>
+                    <!-- adding multiple="multiple" attribute allows one to select several in list -->
+                    <!-- size determines how many options to show at once -->
+                    <select name="crust" id="crust">
+                        <option value="thin">Thin</option>
+                        <option value="handTossed">Hand-Tossed</option>
+                        <option value="deepDish">Deep Dish</option>
+                    </select>
+                    <br/>
 
-                    <fieldset>
-                        <legend>Pizza Information</legend>
-                        <label for="crust">Type of Crust</label>
-                        <!-- adding multiple="multiple" attribute allows one to select several in list -->
-                        <!-- size determines how many options to show at once -->
-                        <select name="crust" id="crust">
-                            <option value="thin">Thin</option>
-                            <option value="handTossed">Hand-Tossed</option>
-                            <option value="deepDish">Deep Dish</option>
-                        </select>
+                    <!-- name is topping since the checkboxes are all grouped -->
+                    <!-- checked="checked" will preset the box to be checked off -->
+                    <div class="ingredients">
+                        <input type="checkbox" id="pepperoni" name="topping" value="pepperoni" />
+                        <label for="pepperoni">Pepperoni</label>
                         <br/>
-
-                        <!-- name is topping since the checkboxes are all grouped -->
-                        <!-- checked="checked" will preset the box to be checked off -->
-                        <div class="ingredients">
-                            <input type="checkbox" id="pepperoni" name="topping" value="pepperoni" />
-                            <label for="pepperoni">Pepperoni</label>
-                            <br/>
-                            <input type="checkbox" id="sausage" name="topping" value="sausage" />
-                            <label for="sausage">Sausage</label>
-                            <br/>
-                            <input type="checkbox" id="beef" name="topping" value="beef" />
-                            <label for="beef">Beef</label>
-                            <br/>
-                            <input type="checkbox" id="gChicken" name="topping" value="gChicken" />
-                            <label for="gChicken">Grilled Chicken</label>
-                            <br/>
-                        </div>
-                        <div class="ingredients">
-                            <input type="checkbox" id="bacon" name="topping" value="bacon" />
-                            <label for="bacon">Bacon</label>
-                            <br/>
-                            <input type="checkbox" id="mushrooms" name="topping" value="mushrooms" />
-                            <label for="mushrooms">Mushrooms</label>
-                            <br/>
-                            <input type="checkbox" id="blOlives" name="topping" value="blOlives" />
-                            <label for="blOlives">Black Olives</label>
-                            <br/>
-                            <input type="checkbox" id="tomatoes" name="topping" value="tomatoes" />
-                            <label for="tomatoes">Tomatoes</label>
-                            <br/>
-                        </div>
-                        <div class="ingredients">
-                            <input type="checkbox" id="gPeppers" name="topping" value="gPeppers" />
-                            <label for="gPeppers">Green Peppers</label>
-                            <br/>
-                            <input type="checkbox" id="jalPeppers" name="topping" value="jalPeppers" />
-                            <label for="jalPeppers">Jalapeno Peppers</label>
-                            <br/>
-                            <input type="checkbox" id="onions" name="topping" value="onions" />                            <label for="onions">Onions</label>
-                            <br/>
-                            <input type="checkbox" id="exCheese" name="topping" value="exCheese" checked="checked" />
-                            <label for="exCheese">Extra Cheese</label>
-                            <br/>
-                        </div>
-
-                        <p>Special Instructions:</p>
-                        <!-- text areas used for large amount of input text-->
-                        <!-- placeholder text will disappear once text is typed-->
-                        <textarea name="instructions" placeholder="How would you like your pizza cut?"></textarea>
+                        <input type="checkbox" id="sausage" name="topping" value="sausage" />
+                        <label for="sausage">Sausage</label>
                         <br/>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Payment Information</legend>
-                        <p>How would you like to pay for your order?</p>
-                        <input type="radio" name="payment" value="cash" id="cash" />
-                        <label for="cash">Cash</label>
-                        <input type="radio" name="payment" value="check" id="check" />
-                        <label for="check">Check</label>
-
-                        <input type="radio" name="payment" value="creditCard" id="creditCard" />
-                        <label for="creditCard">Credit Card</label>
-                        <!-- using password for the text type will pw protect the input; values will appear as dots-->
-                        <input type="password" name="ccardNum" />
-
-                        <p>Would you like the driver to call before leaving?</p>
-                        <input type="radio" name="callAhead" value="yes" id="yes" />
-                        <label for="yes">Yes</label>
-                        <input type="radio" name="callAhead" value="no" id="no" checked/>
-                        <label for="no">No</label>
+                        <input type="checkbox" id="beef" name="topping" value="beef" />
+                        <label for="beef">Beef</label>
                         <br/>
+                        <input type="checkbox" id="gChicken" name="topping" value="gChicken" />
+                        <label for="gChicken">Grilled Chicken</label>
+                        <br/>
+                    </div>
+                    <div class="ingredients">
+                        <input type="checkbox" id="bacon" name="topping" value="bacon" />
+                        <label for="bacon">Bacon</label>
+                        <br/>
+                        <input type="checkbox" id="mushrooms" name="topping" value="mushrooms" />
+                        <label for="mushrooms">Mushrooms</label>
+                        <br/>
+                        <input type="checkbox" id="blOlives" name="topping" value="blOlives" />
+                        <label for="blOlives">Black Olives</label>
+                        <br/>
+                        <input type="checkbox" id="tomatoes" name="topping" value="tomatoes" />
+                        <label for="tomatoes">Tomatoes</label>
+                        <br/>
+                    </div>
+                    <div class="ingredients">
+                        <input type="checkbox" id="gPeppers" name="topping" value="gPeppers" />
+                        <label for="gPeppers">Green Peppers</label>
+                        <br/>
+                        <input type="checkbox" id="jalPeppers" name="topping" value="jalPeppers" />
+                        <label for="jalPeppers">Jalapeno Peppers</label>
+                        <br/>
+                        <input type="checkbox" id="onions" name="topping" value="onions" />
+                        <label for="onions">Onions</label>
+                        <br/>
+                        <input type="checkbox" id="exCheese" name="topping" value="exCheese" checked="checked" />
+                        <label for="exCheese">Extra Cheese</label>
+                        <br/>
+                    </div>
 
-                        <!-- since text appears on the button, the value can be two separate words -->
-                        <input type="submit" name="submit" value="Order Pizza" id="submit" />
-                    </fieldset>
-                </form>
-            </main>
-        </div>
+                    <p>Special Instructions:</p>
+                    <!-- text areas used for large amount of input text-->
+                    <!-- placeholder text will disappear once text is typed-->
+                    <textarea name="instructions" placeholder="How would you like your pizza cut?"></textarea>
+                    <br/>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Payment Information</legend>
+                    <p>How would you like to pay for your order?</p>
+                    <input type="radio" name="payment" value="cash" id="cash" />
+                    <label for="cash">Cash</label>
+                    <input type="radio" name="payment" value="check" id="check" />
+                    <label for="check">Check</label>
+
+                    <input type="radio" name="payment" value="creditCard" id="creditCard" />
+                    <label for="creditCard">Credit Card</label>
+                    <!-- using password for the text type will pw protect the input; values will appear as dots-->
+                    <input type="password" name="ccardNum" />
+
+                    <p>Would you like the driver to call before leaving?</p>
+                    <input type="radio" name="callAhead" value="yes" id="yes" />
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="callAhead" value="no" id="no" checked/>
+                    <label for="no">No</label>
+                    <br/>
+
+                    <!-- since text appears on the button, the value can be two separate words -->
+                    <input type="submit" name="submit" value="Order Pizza" id="submit" />
+                </fieldset>
+            </form>
+        </main>
     </body>
 </html>
