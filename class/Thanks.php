@@ -10,30 +10,30 @@
     </head>
 
     <body>
-        <header>
+      <header>
+        <a href="index.html">
+          <img src="images/logoS16.png" alt="Spring 2018 Logo" height="45" width="177" />
+        </a>
         <nav>
-            <a href="index.html">
-                <img src="images/logoS16.png" alt="Spring 2018 Logo" height="45" width="177" />
-            </a>
-            <ul>
-                <li>
-                    <a href="courseInfo.html">COURSE</a>
-                </li>
-                <li>
-                    <a href="schedule.html">SCHEDULE</a>
-                </li>
-                <li>
-                    <a href="resources.html">RESOURCES</a>
-                </li>
-                <li>
-                    <a href="class.html">CLASS ROSTER</a>
-                </li>
-                <li>
-                    <a href="../project/contact.html">CONTACT</a>
-                </li>
-            </ul>
+          <ul>
+            <li>
+              <a href="courseInfo.html">COURSE</a>
+            </li>
+            <li>
+              <a href="schedule.html">SCHEDULE</a>
+            </li>
+            <li>
+              <a href="resources.html">RESOURCES</a>
+            </li>
+            <li>
+              <a href="class.html">CLASS ROSTER</a>
+            </li>
+            <li>
+              <a href="contact.html">CONTACT</a>
+            </li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
     <div id="pictureBox">
         <img src="images/contact.png" alt="Contact Us" height="100" width="100" />

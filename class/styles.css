@@ -69,12 +69,17 @@ a {
   color: gray;
 }
 
+a:visited {
+  color: purple;
+}
+
 h1 {
   color: rgb(228, 77, 38);
   font-size: 200%;
   /* margin-bottom: 10px; */
   position: relative;
   top: -10px;
+  text-shadow: 2px 2px darkgrey;
 }
 
 h2 {
@@ -102,6 +107,7 @@ footer {
   padding: 20px 20px;
   position: relative;
   top: -8px;
+  clear: both;
 }
 
 #pictureBox {
@@ -245,6 +251,7 @@ textarea {
 
 #submit {
   position: relative;
+  text-align: center;
   left: 130px;
 }
 
