@@ -1,15 +1,28 @@
-html,
-body {
+html {
   height: 100%;
+  /* Hide any content that extends outside the window */
+  overflow: hidden;
 }
 
 body {
+  height: 100%;
   /* remove all padding and margins */
   margin: 0;
   padding: 0;
   font-family: Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   line-height: 150%;
+  /* Scroll on the y-axis, hide on the x-axis */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  perspective: 1px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .section.header {
@@ -37,8 +50,14 @@ p {
 }
 
 .section {
+  position: relative;
   padding: 20% 10%;
-  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.6), 0 -5px 1px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.6), 0 -5px 1px rgba(0, 0, 0, 0.7);
+  min-height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  /* We want the picture in the center */
+  background: 50% 50% / cover;
 }
 
 .text {
@@ -68,27 +87,79 @@ p {
 #title {
   /* "Dark Slate Gray" */
   background-color: #29202a;
+  background-image: url(images/Photos/needle.jpg);
+  /* Background will not move; info will scroll over it */
+  background-attachment: fixed;
 }
 
 #section1 {
   /* "Brick Red" */
   background-color: #c44d33;
+  background-image: url(images/Photos/statue.jpg);
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
 }
 
 #section2 {
   /* "Sienna" */
   background-color: #974739;
+  background-image: url(images/Photos/castle.jpg);
+  background-attachment: fixed;
 }
 
 #section3 {
   /* "Dark Salmon" */
   background-color: #e9b78b;
+  background-image: url(images/Photos/arch.jpg);
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
 }
 
 #section4 {
   /* "Dark Olive Green */
   background-color: #632f2f;
+  background-image: url(images/Photos/townsquare.jpg);
 }
+
+/* .teachBox {
+  display: inline-block;
+} */
+
+#rector {
+  float: left;
+  width: 150px;
+}
+
+/*--- FORM SETTINGS ---*/
+
+form {
+  padding-top: 20px;
+}
+
+label {
+  vertical-align: top;
+  display: inline-block;
+  width: 120px;
+  text-align: left;
+  margin-right: 5px;
+}
+
+input,
+textarea {
+  margin-bottom: 10px;
+}
+
+#radio {
+  position: relative;
+}
+
+#submit {
+  position: relative;
+  text-align: center;
+  left: 130px;
+}
+
+/*--- END OF FORM SETTINGS  ---*/
 
 /*---- TABLE SETTINGS ----*/
 table {
